@@ -1,0 +1,68 @@
+/* style.css */
+
+#calculator {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+#container {
+    width: 320px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    color: white;
+    background-color: #333;
+    text-align: right;
+    font-size: 2.5rem;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container button {
+    flex: 0 0 25%;
+    height: 80px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.feature {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.operator {
+    background-color: #f57c00;
+    color: white;
+}
+
+.number {
+    background-color: #333;
+    color: white;
+}
+
+/* Tombol 0 melebar jadi 2 kolom */
+button.number.zero {
+    flex: 0 0 50%;
+}
