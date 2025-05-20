@@ -6,3 +6,22 @@ const divide = (firstNumber, secondNumber) => firstNumber / secondNumber;
 let firstNumber;
 let secondNumber;
 let operator;
+
+const operate = (operator, firstNumber, secondNumber) => {
+    switch (operator) {
+        case '+':
+            return add(firstNumber, secondNumber);
+            break;
+        case '-':
+            return subtract(firstNumber, secondNumber);
+            break;
+        case '*':
+            return multiply(firstNumber, secondNumber);
+            break;
+        case '/':
+            return divide(firstNumber, secondNumber);
+            break;
+        default:
+            return 'wrong operator';
+    }
+}
