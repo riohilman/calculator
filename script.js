@@ -38,3 +38,19 @@ numberButtons.forEach(button => {
         }    
     });
 });
+
+const operatorButtons = document.querySelectorAll('.operator');
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (button.textContent === '=') {
+            secondNumber = Number(display.textContent);
+            const result = operate(operator, firstNumber, secondNumber);
+            display.textContent = result;
+        } else {
+            firstNumber = Number(display.textContent);
+            operator = button.textContent;
+            display.textContent = '';
+        }
+    })
+})
