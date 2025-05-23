@@ -25,3 +25,16 @@ const operate = (operator, firstNumber, secondNumber) => {
             return 'wrong operator';
     }
 }
+
+const display = document.querySelector('#display');
+const numberButtons = document.querySelectorAll('.number');
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (display.textContent === '0') {
+            display.textContent = button.textContent;
+        } else {
+            display.textContent += button.textContent;
+        }    
+    });
+});
