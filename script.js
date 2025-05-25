@@ -66,4 +66,14 @@ clearButton.addEventListener('click', () => {
     firstNumber = undefined;
     secondNumber = undefined;
     operator = undefined;
-})
+});
+
+const backspace = document.querySelector('#backspace');
+
+backspace.addEventListener('click', () => {
+    if (display.textContent.length === 1) {
+        display.textContent = '0';
+    } else {
+        display.textContent = display.textContent.slice(0, -1);
+    }
+});
