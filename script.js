@@ -48,9 +48,13 @@ const operatorButtons = document.querySelectorAll('.operator');
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (button.textContent === '=') {
+            if (operator === undefined || firstNumber === undefined) return;
             secondNumber = Number(display.textContent);
             const result = operate(operator, firstNumber, secondNumber);
             display.textContent = result;
+            firstNumber = result;
+            operator = undefined;
+            secondNumber = undefined;
         } else {
             firstNumber = Number(display.textContent);
             operator = button.textContent;
