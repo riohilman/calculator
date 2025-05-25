@@ -53,4 +53,13 @@ operatorButtons.forEach(button => {
             display.textContent = '';
         }
     })
+});
+
+const clearButton = document.querySelector('#clear');
+
+clearButton.addEventListener('click', () => {
+    display.textContent = '0';
+    firstNumber = undefined;
+    secondNumber = undefined;
+    operator = undefined;
 })
