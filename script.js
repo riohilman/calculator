@@ -31,10 +31,14 @@ const numberButtons = document.querySelectorAll('.number');
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-        if (display.textContent === '0') {
-            display.textContent = button.textContent;
+        const value = button.textContent;
+
+        if(value === '.' && display.textContent.includes('.')) return;
+
+        if (display.textContent === '0' && value !== '.') {
+            display.textContent = value;
         } else {
-            display.textContent += button.textContent;
+            display.textContent += value;
         }    
     });
 });
