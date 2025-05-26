@@ -61,8 +61,3 @@
     background-color: #333;
     color: white;
 }
-
-/* Tombol 0 melebar jadi 2 kolom */
-button.number.zero {
-    flex: 0 0 50%;
-}

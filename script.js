@@ -88,3 +88,10 @@ percentButton.addEventListener('click', () => {
     const currentValue = Number(display.textContent);
     display.textContent = currentValue / 100;
 });
+
+const signButton = document.querySelector('#sign');
+
+signButton.addEventListener('click', () => {
+    const currentValue = Number(display.textContent);
+    display.textContent = (currentValue * -1).toString();
+})
