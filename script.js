@@ -81,3 +81,10 @@ backspace.addEventListener('click', () => {
         display.textContent = display.textContent.slice(0, -1);
     }
 });
+
+const percentButton = document.querySelector('#percent');
+
+percentButton.addEventListener('click', () => {
+    const currentValue = Number(display.textContent);
+    display.textContent = currentValue / 100;
+});
