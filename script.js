@@ -94,4 +94,24 @@ const signButton = document.querySelector('#sign');
 signButton.addEventListener('click', () => {
     const currentValue = Number(display.textContent);
     display.textContent = (currentValue * -1).toString();
-})
+});
+
+document.addEventListener('keydown', (event) => {
+    const key = event.key;
+
+    if (!isNaN(key) || key === '.') {
+        // Simulasikan klik tombol angka
+        const numberButton = [...numberButtons].find(btn => btn.textContent === key);
+        if (numberButton) numberButton.click();
+    } else if (['+', '-', '*', '/'].includes(key)) {
+        const opButton = [...operatorButtons].find(btn => btn.textContent === key);
+        if (opButton) opButton.click();
+    } else if (key === 'Enter' || key === '=') {
+        const equalButton = [...operatorButtons].find(btn => btn.textContent === '=');
+        if (equalButton) equalButton.click();
+    } else if (key === 'Backspace') {
+        backspace.click();
+    } else if (key === 'Escape') {
+        clearButton.click();
+    }
+});
